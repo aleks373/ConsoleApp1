@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics.Metrics;
+using System.Xml.Linq;
 
 namespace ConsoleApp1
 {
@@ -45,15 +46,15 @@ namespace ConsoleApp1
             // var weight = 50;
             // Console.WriteLine("Мой Возраст {0} \n Мой Вес {1}", age ,weight);
 
-
-            // string myName = "Jane";
-            // int age = 27;
-            //  string black = null;
-            //  string favcolor = black;
-            //  Console.WriteLine("Меня зовут {0}", myName);
-            // Console.WriteLine("мой возраст {1}", age);
-            //   Console.WriteLine("мой любимый цвет {3}", favcolor);
-            //   Console.WriteLine("имя {0} \n мой возраст {1} \n мой любимый цвет{2}",name, age , favcolor);
+            //Console.Write("Enter your name: ");
+            //string name = Console.ReadLine();
+            //Console.Write("Enter your age: ");
+            // var age = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("your favorite color: ");
+            //var favcolor = Console.ReadLine();
+            //Console.WriteLine("{0} \n {1} \n {2}", name,age, favcolor);
+            //var birthdate = Console.ReadLine();
+            //Console.ReadKey();
 
 
             // Console.Write("Enter your age: ");
@@ -76,17 +77,42 @@ namespace ConsoleApp1
             //Console.ReadKey();
 
 
-            Console.Write("Enter your name: ");
-            string name = Console.ReadLine();
-            Console.Write("Enter your age: ");
-            var age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Your name is {0} and age is {1}", name,age);
-            Console.Write("Enter your birthdate: ");
-            var birthdate = Console.ReadLine();
-            Console.WriteLine("Your birthdate is {0}", birthdate);
-            Console.ReadKey();
+            //Console.Write("Enter your name: ");
+            //string name = Console.ReadLine();
+            // Console.Write("Enter your age: ");
+            // var age = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("Your name is {0} and age is {1}", name,age);
+            // Console.Write("Enter your birthdate: ");
+            // var birthdate = Console.ReadLine();
+            // Console.WriteLine("Your birthdate is {0}", birthdate);
+            // Console.ReadKey();
 
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
+            var color = Console.ReadLine();
+
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is red!");
+            }
+
+            else if (color == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is green!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is cyan!");
+            }
         }
     }
 }
