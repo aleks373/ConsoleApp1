@@ -1,12 +1,17 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.VisualBasic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.Design;
 using System.Diagnostics.Metrics;
+using System.Security.Cryptography;
+using System.Threading.Channels;
 using System.Xml.Linq;
 
 namespace ConsoleApp1
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             //string MyName = "Jane";
@@ -247,25 +252,99 @@ namespace ConsoleApp1
 
 
 
-           /* (string Name, string Type, double Age, int NameCount) Pet;
+            /* (string Name, string Type, double Age, int NameCount) Pet;
 
-            Console.WriteLine("Введите имя питомца");
-            Pet.Name = Console.ReadLine();
-            Pet.NameCount = Pet.Name.Length;
+             Console.WriteLine("Введите имя питомца");
+             Pet.Name = Console.ReadLine();
+             Pet.NameCount = Pet.Name.Length;
 
-            Console.WriteLine("Введите вид питомца: ");
-            Pet.Type = Console.ReadLine();
+             Console.WriteLine("Введите вид питомца: ");
+             Pet.Type = Console.ReadLine();
 
-            Console.WriteLine("Введите возраст питомца:");
-            Pet.Age = double.Parse(Console.ReadLine());
+             Console.WriteLine("Введите возраст питомца:");
+             Pet.Age = double.Parse(Console.ReadLine());
 
-            Console.WriteLine();*/
+             Console.WriteLine();*/
 
 
+
+            //string str = "Слов";
+
+            //if (str == "Слово")
+            //{   Console.WriteLine("God");
+
+            //}
+
+            //else
+            //{
+            //    Console.WriteLine("no God");
+            //}
+
+
+
+            //int age = 18;
+            //  Console.WriteLine(age == 10 ? "Yes" : "No");
+
+            //string MyName = "Jane";
+            //byte age = 30;
+            //bool pets = true;
+            //double size = 37.5;
+
+            //Console.WriteLine("My name is {0}\n my age is {1}\n Do i have a pet {2}\n my shoe size is :{3} ", MyName , age, pets, size);
+
+
+
+
+            //string Myname = "alex";
+            //Console.WriteLine("привет мир!");
+            //Console.WriteLine("");
+            //Console.WriteLine($"Меня зовут {Myname}");
+
+
+            //Console.Write("Enter your name:");
+            //string name = Console.ReadLine();
+            //Console.Write("Enter your age:");
+            //byte age = checked((byte)int.Parse(Console.ReadLine()));
+            //int intage = age;
+            //Console.WriteLine("your name is {0}\n your age is {1}",name,age);
+            //Console.Write("What is your favorite day:");
+            //DayOfWeek day= (DayOfWeek)int.Parse(Console.ReadLine());
+            //Console.WriteLine(" your favorite day is {0}",day);
+
+
+
+            //var a = 6;
+            //var b = 7;
+
+            //var c = a != b ? a + b : b;
+
+            //Console.WriteLine(c);
+
+
+
+            Console.WriteLine("напишите что то");
+            var str = Console.ReadLine();
+            Console.WriteLine("укажите угубину эха");
+            var deep = int.Parse(Console.ReadLine());
+            Echo(str, deep);
+            Console.ReadKey();
+        }
+        static void Echo (string saidworld, int deep)
+        {
+            var modif = saidworld;
+        
+         if (modif.Length > 2) {
+                modif = modif.Remove(0, 2);
+                Console.WriteLine("..." + modif);
+                if (deep>1 )
+                {
+                    Echo(modif, deep - 1);
+                }
+            }
+          }
+           }
 
         }
+    
 
 
-
-    }            
-} 
